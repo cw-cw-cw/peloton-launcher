@@ -55,3 +55,20 @@ MIT -- see LICENSE.
 - [docs/02-how-it-works.md](docs/02-how-it-works.md) - how the launcher is built and works
 - [docs/03-safety-and-the-lock.md](docs/03-safety-and-the-lock.md) - the safety boundary: what this never touches, and why
 - [docs/04-lessons-learned.md](docs/04-lessons-learned.md) - build notes and gotchas
+
+## Credits
+
+This project stands on the work of others who mapped out what's possible (and what isn't) on Peloton hardware:
+
+- [ericwhyne/pelaton-improve](https://github.com/ericwhyne/pelaton-improve) - documented the read-only sensor approach and, crucially, that `com.onepeloton.sensorstateindicator` arms the belt controller (see the safety doc).
+- [doudar/Openpelo](https://github.com/doudar/Openpelo) - a cross-platform tool for sideloading apps onto Peloton equipment.
+- [doudar/grupetto](https://github.com/doudar/grupetto) - an overlay for the Peloton Bike that informed the general approach.
+
+Apps this pairs well with (all independent projects):
+
+- [Aurora Store](https://auroraoss.com) - Play catalog without Google services
+- [SmartTube](https://github.com/yuliskov/SmartTube) - account-based YouTube for Android TV, no ads
+- [NewPipe](https://newpipe.net) - lightweight YouTube client
+- [F-Droid](https://f-droid.org) - open-source app store
+
+Not affiliated with any of the above, or with Peloton.
