@@ -39,3 +39,32 @@ The launcher only **reads** the list of launchable apps and **launches** them. T
 ## The honest bottom line
 
 A treadmill is not a TV. When you are moving (a walk, a run, or any Peloton class), the lock never fires, so you can watch whatever you want uninterrupted - that's the real win here. When you are standing still, the lock will interrupt you, by design. If you want to watch something standing still with no interruptions, use a separate screen, not the treadmill. Don't try to defeat the lock. It is the part that stops the belt when someone - a kid, a pet, you after a stumble - is on or under it and not running.
+
+## The design tension worth raising with Peloton
+
+This project does **not** defeat the lock, and nothing in this section is a workaround. But there is a real product-design contradiction baked into the Tread, and it's worth putting in front of Peloton's team in good faith. Here it is laid out, so the argument doesn't have to be re-made from scratch each time.
+
+### The dissonance, point by point
+
+1. **They built and sell an entertainment machine, then cancel it.** The Tread has a dedicated **Entertainment** section, and Peloton added Netflix as an official partner - they are explicitly inviting you to watch things on this screen. Yet the moment you are stationary and not in a class, the 45-second lock blacks that entertainment out. One feature negates the feature sitting right next to it.
+
+2. **The lock conflates "no one is watching the screen" with "the machine is unsafe."** The hazard the recall addressed is the **belt moving** with someone on or under it, unattended. That is a belt-motion question. But the lock triggers on *screen inactivity* (speed 0, no incline change, no touch, not in a class), which is a *different* question. Standing still watching a 30-minute video on purpose and walking away from a ready machine look identical to the current rule - even though the belt hazard exists in only one of them.
+
+3. **Their own off-belt content trips the running-safety lock.** Peloton ships strength and floor classes meant to be done *off* the belt, and members have repeatedly reported the Tread Lock firing *during* those classes. A safety stop designed around a running belt is interrupting content Peloton itself designed to be done while not running.
+
+4. **They already have the sensors to tell the difference - and don't use them here.** The Tread has presence sensing and a camera; the strength "movement tracker" literally uses that camera to watch you move. The hardware can distinguish "a person is here, stationary, watching" from "abandoned and ready to run." The lock draws on none of it - it just counts to 45.
+
+### Peloton's side, stated fairly
+
+The recall followed a child's death and dozens of injuries, so Peloton chose a conservative, fail-safe, dead-simple rule. A blunt timer is easy to reason about, easy to defend to a regulator, and has no clever edge cases to get wrong. That is a legitimate engineering and legal position, and any proposal has to be **at least as safe** - not a loosening.
+
+### A middle ground that keeps the safety goal intact
+
+The key realization: the real safety requirement is about the **belt**, not the **screen**. Decouple the two and both goals can be met.
+
+- **Leave the lock exactly as-is whenever the belt is armed and runnable.** No change there at all.
+- **Add an explicit, opt-in Entertainment / TV mode** in which the belt is *fully disabled* - it cannot move without exiting the mode and re-entering the PIN. In that state the belt is arguably *safer* than normal (hard-locked out), so the screen has no reason to black out. You get uninterrupted viewing **and** a belt that physically can't start.
+- **Or use the presence/camera signal Peloton already has:** if a person is detected present but stationary, and the belt is parked (0 speed, 0 incline, not armed), suppress the *screen* blackout while keeping the *belt* locked. Belt safety is untouched; only the blackout is relaxed.
+- Either way, the **PIN-to-run protection - the thing that actually stops a child from starting the belt - stays exactly as strong.**
+
+The ask is not "turn off the safety feature." It is: *stop letting a belt-safety timer break the entertainment product you built, when you already have cleaner ways to tell a watching human from an abandoned machine.*
