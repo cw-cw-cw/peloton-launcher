@@ -1,6 +1,18 @@
 # Letting the entertainment product work without weakening belt safety
 ### A good-faith proposal for Peloton's product & safety teams
 
+## Start here: you already ship this on your bikes
+
+The core idea here is not new to Peloton - it is how your own Entertainment feature already works on every device *without* a moving belt.
+
+On a **Bike or Bike+**, a member can stop pedaling, sit still, and keep watching Netflix or YouTube with no blackout and no 45-second lock. That is possible because a stationary bike has **no moving belt** - there is no "someone gets pulled under it" hazard, so there is no belt auto-stop lock to collide with the screen. In practice, the Entertainment experience on the bikes already *is* the "TV mode" this document asks for.
+
+The **treadmills are the exception, and the Tread+ most of all**, for one reason: the powered belt. The Tread Lock (the PIN plus the 45-second inactivity lock) is the safety remediation that came out of the Tread+ recall, and it is specific to machines with a running belt. That lock is legitimate - but it was applied bluntly to the **whole screen**, so it also blacks out the Entertainment product Peloton ships and markets on the very same device.
+
+So the honest framing of this entire document is narrow: **the Tread+ Entertainment experience is inconsistent with the Entertainment experience Peloton already delivers everywhere else.** This is not a request to invent a new feature or to relax belt safety. It is a request that Entertainment behave on the Tread+ the way it already behaves on the bikes - with the one extra guardrail a treadmill requires, because unlike a bike it has a belt that can move.
+
+That guardrail is the whole reason this cannot simply be copied from the bike and has to be done in firmware: the bike is safe because it has nothing to run, while the Tread+ needs a provable "belt is parked and cannot move" signal before the screen is allowed to stay on. Same destination, one more check - detailed in the options and reference logic below.
+
 ## The ask, in one line
 
 Keep the belt-safety protection exactly as strong as it is today, and stop the belt-safety *timer* from blacking out the entertainment experience when the belt is parked and cannot move. What follows is the reasoning, the constraints, and a **menu** of ways to get there - not a single mandated fix.
