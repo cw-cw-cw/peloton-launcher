@@ -48,3 +48,10 @@ Then run ./build.sh (needs JDK 17 and the Android SDK build-tools + platform 33)
 ## License
 
 MIT -- see LICENSE.
+
+## Docs
+
+- [docs/01-from-scratch-setup.md](docs/01-from-scratch-setup.md) - set it up from zero: developer mode, wireless debugging, installing apps
+- [docs/02-how-it-works.md](docs/02-how-it-works.md) - how the launcher is built and works
+- [docs/03-safety-and-the-lock.md](docs/03-safety-and-the-lock.md) - the safety boundary: what this never touches, and why
+- [docs/04-lessons-learned.md](docs/04-lessons-learned.md) - build notes and gotchas
