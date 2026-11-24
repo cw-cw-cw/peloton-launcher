@@ -4,7 +4,7 @@ A lightweight custom Android home screen for the Peloton Tread / Tread+ (G700, A
 
 ## Safety -- please read
 
-This is a **home-screen launcher only**. It does **not** modify, extend, disable, hide, or interfere with the Peloton Tread Lock (the belt safety stop) or any speed, incline, or belt-arming behavior. The 45-second safety lock still works exactly as Peloton designed it: if you are stationary, it will still engage. Do not attempt to change those systems -- a treadmill can cause serious injury.
+This is a **home-screen launcher only**. It does **not** modify, extend, disable, hide, or interfere with the Peloton Tread Lock (the belt safety stop) or any speed, incline, or belt-arming behavior. The 45-second safety lock still works exactly as Peloton designed it: if you are stationary, it will still engage. Do not attempt to change those systems -- a treadmill can cause serious injury. See [docs/03-safety-and-the-lock.md](docs/03-safety-and-the-lock.md).
 
 ## What it does
 
@@ -28,7 +28,7 @@ This is a **home-screen launcher only**. It does **not** modify, extend, disable
 3. On your computer: adb pair <ip>:<pairPort> <code>  then  adb connect <ip>:<connectPort>
 4. Run:  ./install.sh <ip>:<connectPort>
 
-That installs the app, makes it the home screen, and enables the floating Home button.
+That installs the app, makes it the home screen, and enables the floating Home button. Full walkthrough in [docs/01-from-scratch-setup.md](docs/01-from-scratch-setup.md).
 
 ## Build from source
 
@@ -45,22 +45,23 @@ Then run ./build.sh (needs JDK 17 and the Android SDK build-tools + platform 33)
 - Peloton software updates can remove sideloaded apps or reset the home launcher; just re-run the installer.
 - Android application id: com.colin.treadhome
 
-## License
-
-MIT -- see LICENSE.
-
 ## Docs
 
 - [docs/01-from-scratch-setup.md](docs/01-from-scratch-setup.md) - set it up from zero: developer mode, wireless debugging, installing apps
 - [docs/02-how-it-works.md](docs/02-how-it-works.md) - how the launcher is built and works
 - [docs/03-safety-and-the-lock.md](docs/03-safety-and-the-lock.md) - the safety boundary: what this never touches, and why
 - [docs/04-lessons-learned.md](docs/04-lessons-learned.md) - build notes and gotchas
+- [docs/05-proposal-for-peloton.md](docs/05-proposal-for-peloton.md) - a good-faith, option-by-option proposal to let entertainment work without weakening belt safety
+
+## License
+
+MIT -- see LICENSE.
 
 ## Credits
 
 This project stands on the work of others who mapped out what's possible (and what isn't) on Peloton hardware:
 
-- [ericwhyne/pelaton-improve](https://github.com/ericwhyne/pelaton-improve) - documented the read-only sensor approach and, crucially, that `com.onepeloton.sensorstateindicator` arms the belt controller (see the safety doc).
+- [ericwhyne/pelaton-improve](https://github.com/ericwhyne/pelaton-improve) - documented the read-only sensor approach and, crucially, that com.onepeloton.sensorstateindicator arms the belt controller (see the safety doc).
 - [doudar/Openpelo](https://github.com/doudar/Openpelo) - a cross-platform tool for sideloading apps onto Peloton equipment.
 - [doudar/grupetto](https://github.com/doudar/grupetto) - an overlay for the Peloton Bike that informed the general approach.
 

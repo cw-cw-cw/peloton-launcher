@@ -68,3 +68,7 @@ The key realization: the real safety requirement is about the **belt**, not the 
 - Either way, the **PIN-to-run protection - the thing that actually stops a child from starting the belt - stays exactly as strong.**
 
 The ask is not "turn off the safety feature." It is: *stop letting a belt-safety timer break the entertainment product you built, when you already have cleaner ways to tell a watching human from an abandoned machine.*
+
+---
+
+For a full, option-by-option version of this argument written for Peloton's team - with safety principles and a menu of solutions - see **[05-proposal-for-peloton.md](05-proposal-for-peloton.md)**.
